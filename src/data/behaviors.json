@@ -1,0 +1,614 @@
+[
+    {
+        "identifier" : "hyperactivite",
+        "name" : "Hyperactif(ve)",
+        "special" : false,
+        "description" : "L'élève est hyper-actif. <strong>Sa concentration et celles des voisins dans une aire de 10 est diminuée de 1 si cet élève est placé hors du 1er rang.</strong>",
+        "commentary" : "L'hyperactivité se traduit par des troubles obssessionnels compulsifs fréquents.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "tall",
+        "name" : "Grand(e)",
+        "special" : false,
+        "description" : "L'élève est plus grand que la moyenne. <strong>Il baisse de 20 la visibilité de tous les élèves placés derrière lui.</strong>",
+        "commentary" : "Probablement un futur rugbyman. Ou pas.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      -20,    0,      0,      0,
+                            0,      0,      0,      -20,    0,      0,      0,
+                            0,      0,      0,      -20,    0,      0,      0,
+                            0,      0,      0,      -20,    0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "fat",
+        "name" : "Gros(se)",
+        "special" : false,
+        "description" : "L'élève est gros. <strong>Il baisse de 20 la visibilité de tous les élèves placés derrière lui, sauf les grands.</strong>",
+        "commentary" : "Sans doute mangé trop de chips au coca. Ou l'inverse.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "embobinable",
+        "name" : "Embobinable",
+        "special" : false,
+        "description" : "L'élève se fait facilement embobiné. <strong>Les effets négatifs subis sont doublés.</strong>",
+        "commentary" : "On peut lui faire faire n'importe quoi.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "emissary",
+        "name" : "Bouc-émissaire",
+        "special" : false,
+        "description" : "<strong>L'Humeur est baissée de 30 s'il est proche d'un Relou.</strong>",
+        "commentary" : "Tout pour sa pomme.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "mascot",
+        "name" : "Mascotte",
+        "special" : false,
+        "description" : "<strong>Augmente de 20 l'Humeur dans une Aire de 1.</strong>",
+        "commentary" : "Il est plus célèbre que n'importe qui.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "shy",
+        "name" : "Timide",
+        "special" : false,
+        "description" : "L'élève est très timide. <strong>L'humeur baisse s'il est placé dans les 2 premiers rangs ou à côté d'un élève du sexe opposé.</strong>",
+        "commentary" : "Des fois, j'ai l'impression qu'il aimerait être ailleurs.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "sad",
+        "name" : "Triste",
+        "special" : false,
+        "description" : "L'élève est tout le temps triste. <strong>Les bonus d'humeur sont augmentés de 50% seulement.</strong>",
+        "commentary" : "...",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "crazy",
+        "name" : "Fou",
+        "special" : true,
+        "description" : "L'élève semble avoir dépassé le stade de la folie. <strong>Gagne une propriété aléatoire non divulgée.</strong>",
+        "commentary" : "Je suis comme un chien enragé qui court après une voiture, mais si j’en attrape une je ne sais pas à quoi elle me serait utile.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "bad-presence",
+        "name" : "Mauvaise présence",
+        "special" : true,
+        "description" : "L'élève dégage une aura de mal-être. <strong>L'Humeur de toute la classe est diminuée de 5.</strong>",
+        "commentary" : "Il y a comme une atmosphère étrange et très... désagréable.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "good-presence",
+        "name" : "Bonne présence",
+        "special" : true,
+        "description" : "L'élève dégage une aura de bien-être. <strong>L'Humeur de toute la classe est augmentée de 5.</strong>",
+        "commentary" : "L'heure est à la fête, comme si une bonne âme rôdait dans la classe.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "first-of-class",
+        "name" : "Premier de classe",
+        "special" : true,
+        "description" : "Un élève concencieux et attentif, en toutes occasions. <strong>Immunisé aux effets de Bavard et Relou et augmente la concentration du voisin direct de 1. L'humeur du Premier de la classe diminue de 5 si sa moyenne n'est pas la meilleure de toute la classe.</strong>",
+        "commentary" : "Si les classes en étaient remplis, on se ferait chier en tant que prof...",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "relou",
+        "name" : "Relou(e)",
+        "special" : false,
+        "description" : "N'en fiche pas une et ennuie ses cammarades par-dessus le marché. <strong>Baisse la concentration de 15 à tous les élèves dans une aire de 1. Si un autre Relou se trouve dans la même rangée, le même effet est appliqué à la rangée complète.</strong>",
+        "commentary" : "Chances de se faire remarquer : 110%.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      -10,   -10,   -10,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "bavard",
+        "name" : "Bavard(e)",
+        "special" : false,
+        "description" : "Ne peut pas s'empêcher de parler. <strong>Baisse la concentration du voisin direct et de la personne derrière lui de 30.</strong>",
+        "commentary" : "Blablablabla blablabla blablablabla ...",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -30,    0,      -30,    0,      0,
+                            0,      0,      0,      -30,    0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "disorganised",
+        "name" : "Désorganisé(e)",
+        "special" : false,
+        "description" : "Cet élève a besoin de toute la place disponible pour déposer ses affaires. Les bancs leur paraissent toujours trop petits. <strong>Augmente leur concentration de 10 s'ils sont seuls sur un banc.</strong>",
+        "commentary" : "La capacité de cet élève a remplir un banc avec seulement un plumier dépasse l'entendement.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -30,    0,      -30,    0,      0,
+                            0,      0,      0,      -30,    0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "cheater",
+        "name" : "Tricheur(euse)",
+        "special" : false,
+        "description" : "Cet élève triche régulièrement. <strong>Augmente leur moyenne s'ils sont placés à côté d'un Premier de classe.</strong>",
+        "commentary" : "On prends parfois plus de temps à préparer les copions qu'à étudier réellement. Mais c'est tout un art.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -30,    0,      -30,    0,      0,
+                            0,      0,      0,      -30,    0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    },
+    {
+        "identifier" : "glasses",
+        "name" : "Myope",
+        "special" : false,
+        "description" : "Cet élève voit mal s'il n'est pas dans les premiers rangs. <strong>Visibilité réduite de 30 s'il n'est pas placé dans les 2 premières rangées.</strong>",
+        "commentary" : "On prends parfois plus de temps à préparer les copions qu'à étudier réellement. Mais c'est tout un art.",
+        "matrix" : {
+            "concentration" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      -30,    0,      -30,    0,      0,
+                            0,      0,      0,      -30,    0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "humor" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ],
+            "visibility" : [
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0,
+                            0,      0,      0,      0,      0,      0,      0
+                        ]
+        }
+    }
+]

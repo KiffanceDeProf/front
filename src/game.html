@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<div class="block-ui">
+    <div class="background-ui">
+        <div class="character-portrait-border">
+            <div class="character-portrait">
+                <img src="img/avatars/avatar-unknown.png" style="background-color: white;" />
+            </div>
+        </div>
+        <div id="character-gender-value" class="character-gender character-gender-female">
+                <i class="fa"></i>
+        </div>
+        <div class="character-label">
+            <div class="character-label-content">
+                
+            </div>
+        </div>
+        <hr style="top: 225px;" />
+        <div class="board-border">
+            <div class="board" style="display: none;">
+                <div class="board-details-moyenne"><strong>Moyenne:</strong> <span id="bord-details-moyenne-value">0/20</span> (<span id="bord-details-moyenne-bonus-value" class="behavior-buff">+3</span>)</div>
+                <div class="board-details-stats">
+                    <div id="board-details-stat-concentration" class="board-details-stat">
+                        <div class="board-details-stat-label">Concentration <span id="board-details-stat-label-concentration-value" class="board-details-stat-label-buff">+0</span></div>
+                        <div id="board-details-stat-label-concentration-percent" class="board-details-stat-progress" style="width: 80%;"></div>
+                    </div>
+                    <div id="board-details-stat-humor" class="board-details-stat">
+                        <div class="board-details-stat-label">Humeur <span id="board-details-stat-label-humor-value" class="board-details-stat-label-buff">+0</span></div>
+                        <div id="board-details-stat-label-humor-percent" class="board-details-stat-progress" style="width: 60%;"></div>
+                    </div>
+                    <div id="board-details-stat-visibility" class="board-details-stat">
+                        <div class="board-details-stat-label">Visibilite <span id="board-details-stat-label-visibility-value" class="board-details-stat-label-buff">+0</span></div>
+                        <div id="board-details-stat-label-visibility-percent" class="board-details-stat-progress" style="width: 30%;"></div>
+                    </div>
+                </div>
+                
+                <p id="list-behavior">
+
+                </p>
+            </div>
+            <div class="board-clean">
+                Sélectionnez un élève
+            </div>
+        </div>
+        <hr style="bottom: 70px;" />
+        <a href="javascript:void(0)" onclick="randomizeClassroom();" class="btn btn-big"><img src="img/dice.png" style="width: 24px; position: relative; top: 6px;"/> Nouvelle classe</a>
+    </div>
+</div>
+<div class="block-game" ondragstart="return false;" ondrop="return false;" onmousedown="startDragnDrop();" onmouseup="stopDragnDrop()" onmousemove="moveDragnDrop(event);">
+    <div class="background-game">
+        
+    </div>
+    <div class="ui-moyenne" style="pointer-events: none;">
+        Moyenne de la classe : <strong><span id="classroom-moyenne-value">0/20</span></strong>
+    </div>
+</div>
+<div id="tooltip-container">
+    <div id="tooltip-0" class="tooltip-border-left" style="left: 183px; top: 335px; display: none;">
+        <div class="tooltip-behavior-descriptor">
+            <h1>Hyperactivité</h1>
+            <p>L'élève est hyper-actif. <strong>Sa concentration et celles des voisins dans une aire de 1 est diminuée de 1 si cet élève est placé hors du 1er rang.</strong></p>
+            <p class="commentary">L'hyperactivité se traduit par des troubles obssessionnels compulsifs fréquents.</p>
+        </div>
+    </div>
+    <div id="tooltip-1" class="tooltip-border-top" style="left: 183px; top: 335px; display: none;">
+        <div class="tooltip-student-descriptor">
+            <h1>Elève ?</h1>
+            <div class="tooltip-student-note">05/20</div>
+        </div>
+    </div>
+    <div id="grab-student" style="display: none;"></div>
+</div>

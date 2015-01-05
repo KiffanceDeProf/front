@@ -1,0 +1,482 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03-janv.-2015, 21:17:34
+    Author     : Christophe
+*/
+
+.game-canvas {
+    width: 1024px;
+    height: 768px;
+    left: 50%;
+    top: 50%;
+    margin-left: -512px;
+    margin-top: -384px;
+    background-color: #2F2E29;
+    position: absolute;
+    box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.58);
+}
+
+/* ========== UI ========== */
+
+.block-ui {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+}
+
+.background-ui {
+    background-color: rgb(179, 121, 83);
+    position: absolute;
+    margin: 25px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    box-shadow: 0px 2px 7px black, inset 0px 0px 5px white;
+    background-image: url(../img/wood-effect.png);
+    background-size: 48px 48px;
+}
+
+.character-portrait-border {
+    border: 15px solid white;
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    left: 50px;
+    top: 15px;
+    box-shadow: 0px 2px 7px black, inset 0px 0px 16px rgb(211, 211, 211);
+    transform: rotateZ(-3deg);
+}
+
+.character-gender {
+    position: absolute;
+    color: blue;
+    font-size: 36px;
+    background-color: white;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    box-shadow: 0px 2px 7px black;
+    top: 131px;
+    left: 173px;
+    z-index: 1;
+    transform: rotateZ(358deg);
+}
+
+.character-gender-male {
+    color: rgb(62, 62, 200);
+}
+
+.character-gender-female {
+    color: rgb(200, 62, 188);
+}
+
+.character-label {
+    position: absolute;
+    top: 176px;
+    left: 15px;
+    width: 220px;
+    height: 38px;
+    background-color: white;
+    box-shadow: 0px 2px 7px black, inset 0px 0px 16px rgb(211, 211, 211);
+    transform: rotateZ(2deg);
+    z-index: 2;
+}
+
+.character-label .character-label-content {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+}
+
+.character-portrait-border .character-portrait img {
+    width: 102%;
+    height: 102%;
+    position: relative;
+    left: -1px;
+    top: -1px;
+}
+
+.board-border {
+    background-color: rgb(200, 160, 134);
+    width: 230px;
+    height: 40%;
+    position: absolute;
+    left: 10px;
+    top: 245px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 7px black, inset 0px 0px 8px white;
+}
+
+.board-border .board {
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.45);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgb(64, 65, 44);
+    position: absolute;
+    margin: 8px;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Coming Soon', cursive;
+    text-shadow: 0px 0px 5px black;
+    padding: 10px;
+}
+
+.board-border .board-clean {
+    font-family: 'Amatic SC', cursive;
+    font-size: 33px;
+    font-style: italic;
+    margin-top: 125px;
+    text-align: center;
+    transform: rotateZ(-47deg);
+}
+
+.board-details-moyenne {
+    margin-bottom: 8px;
+}
+
+.board-details-stats {
+    
+}
+
+.board-details-stat {
+    width: 180px;
+    height: 18px;
+    color: white;
+    font-size: 11px;
+    background-color: white;
+    margin: 5px;
+    border: 2px solid #ddd;
+    box-shadow: inset 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.board-details-stat-progress {
+    height: 100%;
+    box-shadow: inset 0px 4px 15px rgba(255, 255, 255, 0.41);
+}
+
+.board-details-stat-label {
+    float: left;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    text-shadow: 0px 0px 4px black;
+    color: white;
+    font-size: 12px;
+    position: relative;
+    top: -3px;
+    width: 100%;
+    font-family: 'Sigmar One', cursive;
+    opacity: 0.9;
+}
+
+.board-details-stat-label-buff {
+    float: right;
+    position: relative;
+    right: 14px;
+    text-align: right;
+    color: rgb(8, 236, 8);
+    text-shadow: 0px 0px 5px black;
+    font-size: 12px;
+}
+
+.board-details-stat-label-debuff {
+    float: right;
+    position: relative;
+    right: 14px;
+    text-align: right;
+    color: rgb(255, 47, 47);
+    text-shadow: 0px 0px 5px black;
+    font-weight: bolder;
+    font-family: Comic sans-serif;
+    font-size: 17px;
+}
+
+.behavior-title {
+    cursor: pointer;
+}
+
+/* ========== UI - PROPERTIES COLOR ========== */
+
+#board-details-stat-concentration {
+    background-color: rgba(73, 93, 203, 0.38)
+}
+
+#board-details-stat-concentration .board-details-stat-progress {
+    background-color: rgba(73, 93, 203, 1)
+}
+
+#board-details-stat-humor {
+    background-color: rgba(140, 73, 203, 0.38)
+}
+
+#board-details-stat-humor .board-details-stat-progress {
+    background-color: rgba(140, 73, 203, 1)
+}
+
+#board-details-stat-visibility {
+    background-color: rgba(199, 139, 46, 0.38)
+}
+
+#board-details-stat-visibility .board-details-stat-progress {
+    background-color: rgba(199, 139, 46, 1)
+}
+
+/* ========== UI - BUTTONS ========== */
+
+.btn {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 20px;
+    text-decoration: none;
+    font-family: 'Coming Soon', cursive;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: rgb(29, 111, 39);
+    box-shadow: 0px 2px 7px black, inset 0px 30px 30px rgba(255, 255, 255, 0.35);
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.btn:hover {
+    box-shadow: 0px 2px 7px black, inset 0px 30px 30px rgba(255, 255, 255, 0.55);
+}
+
+.btn:active {
+    box-shadow: 0px 2px 7px black, inset 0px 30px 30px rgba(0, 0, 0, 0.55);
+}
+
+.btn-big {
+    
+}
+
+/* ========== UI - TOOLTIPS ========== */
+
+.tooltip-container {
+    position: absolute;
+}
+
+.tooltip-border-left {
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25), inset 0px 2px 100px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 10px;
+    position: fixed;
+    border: 2px solid #ddd;
+}
+
+.tooltip-border-left::after,
+.tooltip-border-left::before {
+    display:block;
+    position:absolute;
+    z-index:1;
+    top: 30px;
+    left:-20px;
+    width:0px;
+    height:0px;
+    border-style:solid;
+    border-width:10px 10px 10px 10px;
+    border-color: transparent rgb(242, 242, 242) transparent transparent;
+    content:' ';
+}
+
+.tooltip-border-top {
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25), inset 0px 2px 100px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    min-width: 100px;
+    padding: 2px;
+    position: fixed;
+    border: 2px solid #ddd;
+    text-align: center;
+}
+
+.tooltip-border-top::after,
+.tooltip-border-top::before {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    margin-left: -8px;
+    border-style: solid;
+    border-width: 10px 10px 10px 10px;
+    border-color: transparent transparent rgb(242, 242, 242) transparent;
+    content: ' ';
+}
+
+.tooltip-student-descriptor {
+    font-family: 'Coming Soon', cursive;
+    font-size: 10px;
+}
+
+.tooltip-student-descriptor h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.tooltip-student-note {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tooltip-behavior-descriptor {
+    font-family: 'Coming Soon', cursive;
+    font-size: 12px;
+}
+
+.tooltip-behavior-descriptor h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+.tooltip-behavior-descriptor p {
+    color: black;
+}
+
+.tooltip-behavior-descriptor p.commentary {
+    font-style: italic;
+    color: rgb(100, 100, 18);
+    margin-bottom: 0px;
+}
+
+
+.behavior-buff {
+    font-weight: bold;
+    color: #33ff33;
+}
+
+hr {
+    position: absolute;
+    width: 230px;
+    box-shadow: 0px 0px 2px black;
+    opacity: 0.4;
+    left: 10px;
+}
+
+/* ========== GAME ========== */
+
+.block-game {
+    width: 724px;
+    height: 100%;
+    position: absolute;
+    left: 300px;
+}
+
+.background-game {
+    background-image: url(../img/base-classroom-0.png);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 714px;
+    height: 459px;
+    margin-top: -250px;
+    margin-left: -355px;
+}
+
+.background-bank {
+    width: 62px;
+    height: 62px;
+    position: absolute;
+}
+
+.background-student {
+    width: 31px;
+    height: 50px;
+    position: absolute;
+    cursor: -webkit-grab; cursor: -moz-grab;
+}
+
+.background-student.selected {
+    border: 3px solid red;
+    margin: -3px;
+}
+
+.background-student-hair {
+    width: 31px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.background-student-shirt {
+    width: 31px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.background-student-pants {
+    width: 31px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.background-student-skin {
+    width: 31px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.background-student-feet {
+    width: 31px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.ui-moyenne {
+    color: white;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-size: 25px;
+    font-family: 'Coming Soon', cursive;
+}
+
+.grabbing {
+    cursor: -webkit-grabbing; cursor: -moz-grabbing;
+}
+
+.grabbing .background-student {
+    pointer-events: none;
+}
+
+.block-game.grabbing {
+    pointer-events: none;
+}
+
+#grab-student {
+    position: fixed;
+    width: 31px;
+    height: 50px;
+    pointer-events: none;
+}
